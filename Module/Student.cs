@@ -9,6 +9,8 @@ namespace Module
 {
     class Student : Person
     {
+        private Stack<int> grades = new Stack<int>();
+
         private static int enrolledStudents;
 
         public static int EnrolledStudents {
@@ -43,16 +45,14 @@ namespace Module
             GoToLibrary();
         }
 
-        private Stack grades = new Stack();
-
         public void AddGrade(int grade)
         {
             grades.Push(grade);
         }
 
-        public Stack GetGrades()
+        public Stack<int> GetGrades()
         {
-            Stack temp = new Stack();
+            Stack<int> temp = new Stack<int>();
 
             foreach(int grade in grades)
             {

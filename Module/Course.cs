@@ -9,9 +9,7 @@ namespace Module
 {
     class Course
     {
-        // LEFT HERE.
         private List<Student> students = new List<Student>();
-        //private ArrayList students = new ArrayList();
         private Teacher[] teachers = new Teacher[3];
 
         //// Course Info
@@ -67,7 +65,7 @@ namespace Module
         /// </summary>
         public void ListStudents()
         {
-            var sortedStudents = students.Cast<Student>().OrderBy(s => s.LastName);
+            var sortedStudents = students.OrderBy(s => s.LastName);
             foreach(Student student in sortedStudents)
             {
                 Console.Write("{0} {1} grades:", student.FirstName, student.LastName);
